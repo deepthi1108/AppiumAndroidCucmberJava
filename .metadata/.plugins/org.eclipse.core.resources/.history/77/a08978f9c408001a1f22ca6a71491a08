@@ -1,0 +1,37 @@
+package Actions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+
+import io.appium.java_client.TouchAction;
+
+public class touchActions {
+	public WebDriver driver;
+
+	
+	public boolean scrollToElement (By by) throws Exception {
+		boolean isFoundTheElement = driver.findElements(by).size() > 0;
+		while (isFoundTheElement == false) {
+		swipeVertical(0.8, 0.1, 0.5, 2000);
+		isFoundTheElement = driver.findElements(by).size() > 0;
+		}
+		return isFoundTheElement;
+	}
+
+//	public void swipeVertical (
+//	  double startPercentage, double finalPercentage, double anchorPercentage, int duration)
+//	  throws Exception {
+//	  org.openqa.selenium.Dimension size = driver.manage().window().getSize();
+//	  int anchor = (int) (size.width * anchorPercentage);
+//	  int startPoint = (int) (size.height * startPercentage);
+//	  int endPoint = (int) (size.height * finalPercentage);
+//	  getTouchAction().press(PointOption.point(anchor, startPoint))
+//	  .waitAction(WaitOptions.waitOptions(Duration.ofMillis(duration)))
+//	  .moveTo(PointOption.point(anchor, endPoint)).release().perform();
+//	}
+
+	public static TouchAction getTouchAction () {
+	  return new TouchAction(driver);
+	}
+}

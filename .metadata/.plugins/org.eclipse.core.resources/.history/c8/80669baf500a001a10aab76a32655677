@@ -1,0 +1,15 @@
+package utility;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+
+import setUp.appiumSetUp;
+
+public class utils extends appiumSetUp{
+	private WebDriver driver;
+
+	public utils(WebDriver driver) {
+		this.driver = getDriver();
+	}
+}

@@ -1,0 +1,24 @@
+package setUp;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class appiumSetUp {
+	WebDriver driver;
+	WebElement element;
+
+	public void setup() {
+	DesiredCapabilities capabilities = new DesiredCapabilities();
+	driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+	capabilities.setCapability("VERSION", "4.4.2"); 
+	capabilities.setCapability("deviceName","Emulator");
+	capabilities.setCapability("platformName","Android");
+	capabilities.setCapability("appPackage", "com.android.calculator2");
+	capabilities.setCapability("appActivity","com.android.calculator2.Calculator");
+	
+}
+	
+
+}

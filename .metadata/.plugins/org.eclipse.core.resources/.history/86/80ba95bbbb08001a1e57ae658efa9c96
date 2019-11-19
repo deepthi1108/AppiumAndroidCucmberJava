@@ -1,0 +1,10 @@
+package utility;
+
+public class productsDisplay {
+
+	public final static String clearance = "Clearance";
+	public final static String productName = "product_item_view_title";
+	public final static String productImageSlideBar = "pdp_info_gallery_view_page_indicator";
+	
+
+}

@@ -1,0 +1,9 @@
+package utility;
+
+public class productsDisplay {
+
+	public final static String clearance = "Clearance";
+	public final static String product = "component_progress_image_view_image_view";
+	
+
+}

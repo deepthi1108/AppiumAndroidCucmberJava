@@ -1,0 +1,43 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import junit.framework.Assert;
+import utility.productsDisplay;
+
+public class productPage {
+	WebDriver driver;
+	WebElement element;
+	String productName;
+
+	 public void validateProductPage(String option) {
+		driver.findElement(By.text("productsDisplay."+option ));
+		
+		}
+	 public void selectItem(int itemNumber) throws Exception {
+		 List<WebElement> elements = driver.findElements(By.id(productsDisplay.productName));
+		 productName = elements.get(itemNumber).getText();
+		 elements.get(itemNumber).click();
+		 driver.wait(1000);
+		 driver.findElement(By.id(productsDisplay.productImageSlideBar));
+		 //scroll down
+		 String productInfoName = driver.findElement(By.id(productsDisplay.productInfoTitle)).getText();
+		 Assert.assertEquals(productName, productInfoName);
+		 
+	 }
+	 
+	 public void addItemToBag() {
+		 //scroll down
+		 driver.findElement(By.id(productsDisplay.addToBagButton)).click();
+	 }
+	 
+	 public void selectSize(size) {
+		 driver.findElement(By.text(productsDisplay.selectSizePage));
+		 
+	 }
+
+}

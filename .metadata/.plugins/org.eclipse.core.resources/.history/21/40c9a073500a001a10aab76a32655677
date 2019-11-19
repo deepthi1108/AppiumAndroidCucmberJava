@@ -1,0 +1,8 @@
+package pages;
+
+public interface BaseSpec {
+
+	homePage HomePage = new homePage();
+	productPage ProductPage = new productPage();
+	shoppingBagPage ShoppingBagPage = new shoppingBagPage();
+}

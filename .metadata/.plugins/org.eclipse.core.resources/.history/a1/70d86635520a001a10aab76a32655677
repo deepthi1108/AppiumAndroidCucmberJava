@@ -1,0 +1,10 @@
+package pages;
+
+import Actions.actions;
+
+public interface BaseSpec {
+
+	homePage HomePage = new homePage(new actions());
+	productPage ProductPage = new productPage();
+	shoppingBagPage ShoppingBagPage = new shoppingBagPage();
+}

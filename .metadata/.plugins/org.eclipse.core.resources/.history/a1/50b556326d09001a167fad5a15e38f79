@@ -1,0 +1,68 @@
+package step_definitions;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import pages.homePage;
+import pages.productPage;
+import pages.shoppingBagPage;
+import setUp.appiumSetUp;
+
+public class homePageSteps extends appiumSetUp{
+	homePage HomePage = new homePage();
+	productPage ProductPage = new productPage();
+	shoppingBagPage ShoppingBagPage = new shoppingBagPage();
+	
+	 @Given("I am on the home page of the app as an anonymous user")
+	    public void userIsOnHomePage() throws Exception {
+		 HomePage.navigateToHomePage();
+	    }
+	 
+	@When("I tap on the menu bar")
+	    public void userTapsOnMenuBar() throws Throwable {
+		HomePage.selectMenuBar();
+		}
+	
+	@When("I select the \"([^\"]*)\" from the menu bar")
+    public void userSelectCategory(String option) throws Throwable {
+	HomePage.selectOptionFromMenuBar(option);
+	ProductPage.validateProductPage(option);
+	}
+	
+	@When("I select the product number \"([^\"]*)\"")
+	public void userSelectItem(int itemNumber) throws Throwable {
+		ProductPage.selectItem(itemNumber);
+	}
+	
+	@When("I add the product to the bag")
+	public void addItemToBag() throws Throwable {
+		ProductPage.addItemToBag();
+	}
+	
+	@When("I select the size of the product as \"([^\"]*)\"")
+	public void selectSize(String size) throws Throwable {
+		ProductPage.selectSize(size);
+	}
+	
+	@Then("I allow the notifications")
+		public void notification() throws Throwable {
+			ProductPage.validateNotifcation();
+		}
+	
+	@When("I select the shopping bag")
+	public void selectShoppingCart() throws Throwable {
+		ShoppingBagPage.clickShoppingBag();
+	}
+	
+	@When("I tap on the checkout to make payment")
+	public void checkout() throws Throwable {
+		ShoppingBagPage.clickCheckout();
+	}
+	
+	@When ("I should be displayed SignIn and Register screen")
+	public void signInRegister() throws Throwable {
+		ShoppingBagPage.validatesignInRegisterPage();
+	}
+	
+
+}

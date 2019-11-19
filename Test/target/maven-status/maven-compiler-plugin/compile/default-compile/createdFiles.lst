@@ -1,0 +1,6 @@
+utility/shoppingBag.class
+setUp/appiumSetUp.class
+utility/productsDisplay.class
+setUp/runner.class
+utility/home.class
+Actions/actions.class

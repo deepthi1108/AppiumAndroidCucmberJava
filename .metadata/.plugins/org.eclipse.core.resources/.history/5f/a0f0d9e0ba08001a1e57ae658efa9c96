@@ -1,0 +1,10 @@
+package utility;
+
+public class productsDisplay {
+
+	public final static String clearance = "Clearance";
+	public final static String product = "component_progress_image_view_image_view";
+	public final static String productImageSlideBar = "pdp_info_gallery_view_page_indicator";
+	
+
+}

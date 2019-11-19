@@ -1,0 +1,19 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+
+import utility.productsDisplay;
+
+public class productPage {
+	WebDriver driver;
+	WebElement element;
+
+	 public void validateProductPage(String option) {
+		driver.findElement(By.id("productsDisplay."+option ));
+		
+		}
+
+}

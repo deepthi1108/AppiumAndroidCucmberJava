@@ -1,0 +1,12 @@
+package utility;
+
+import pages.homePage;
+import pages.productPage;
+import pages.shoppingBagPage;
+
+public interface BaseSpec {
+
+	homePage HomePage = new homePage();
+	productPage ProductPage = new productPage();
+	shoppingBagPage ShoppingBagPage = new shoppingBagPage();
+}

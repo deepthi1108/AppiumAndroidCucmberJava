@@ -1,0 +1,34 @@
+package setUp;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+
+public class appiumSetUp {
+	WebDriver driver;
+	WebElement element;
+
+	@Before
+	public void setup() throws MalformedURLException {
+	DesiredCapabilities capabilities = new DesiredCapabilities();
+	driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+	capabilities.setCapability("VERSION", "4.4.2"); 
+	capabilities.setCapability("deviceName","Emulator");
+	capabilities.setCapability("platformName","Android");
+	capabilities.setCapability("appPackage", "com.poqstudio.app.platform.missguided");
+	capabilities.setCapability("appActivity","com.poqstudio.app.client.view.splash.MissguidedSplashActivity");
+	
+}
+	@After
+	public void cleanUp() {
+	driver.quit();
+}
+
+}

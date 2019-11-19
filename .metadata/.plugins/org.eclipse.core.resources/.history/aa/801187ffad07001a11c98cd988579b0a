@@ -1,0 +1,8 @@
+package utility;
+
+public class home {
+
+	public static final startButton = '';
+	public static final homepage = '';
+
+}

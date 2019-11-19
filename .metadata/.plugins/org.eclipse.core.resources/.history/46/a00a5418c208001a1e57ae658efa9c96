@@ -1,0 +1,19 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import utility.shoppingBag;
+
+public class shoppingBagPage {
+	
+	WebDriver driver;
+
+	public void clickShoppingBag() {
+		driver.findElement(By.id(shoppingBag.shoppingBagIcon)).click();
+		//wait for page
+		driver.wait(1000);
+		driver.findElement(By.Text(shoppingBag.shoppingBagHeader));
+		
+	}
+}

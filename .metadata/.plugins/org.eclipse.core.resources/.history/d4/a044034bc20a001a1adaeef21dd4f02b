@@ -1,0 +1,29 @@
+package step_definitions;
+
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import pages.BasePage;
+
+public class productPageSteps implements BasePage{
+	
+	@When("I select the product number \"([^\"]*)\"")
+	public void userSelectItem(int itemNumber) throws Throwable {
+		ProductPage.selectItem(itemNumber);
+	}
+
+	@When("I add the product to the bag")
+	public void addItemToBag() throws Exception {
+		ProductPage.addItemToBag();
+	}
+
+	@When("I select the size of the product as \"([^\"]*)\"")
+	public void selectSize(String size) throws Throwable {
+		ProductPage.selectSize(size);
+	}
+
+	@Then("I allow the notifications")
+	public void notification() throws Throwable {
+		ProductPage.validateNotifcation();
+	}
+
+}

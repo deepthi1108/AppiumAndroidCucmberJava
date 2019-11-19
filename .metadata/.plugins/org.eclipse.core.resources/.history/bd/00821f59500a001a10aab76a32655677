@@ -1,0 +1,16 @@
+package utility;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+
+public class utils {
+	private WebDriver driver;
+
+	public utils(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	
+	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+}

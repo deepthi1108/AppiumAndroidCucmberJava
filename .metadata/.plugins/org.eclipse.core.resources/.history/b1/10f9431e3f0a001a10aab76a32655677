@@ -1,0 +1,51 @@
+package pages;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import Actions.actions;
+
+import setUp.appiumSetUp;
+import utility.home;
+
+public class homePage{
+	WebDriver driver;
+	actions Actions = new actions();
+	protected WebDriverWait wait ;
+//	public WebDriver driver;
+	public homePage(WebDriver driver) {
+		//driver = appiumSetUp.setup();
+		this.driver = driver;
+		wait = new WebDriverWait(driver, 1000);
+	}
+
+	public void navigateToHomePage() throws Exception{
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(home.startButton))).click();
+		//driver.findElement(By.id(home.startButton)).click(); 
+		driver.findElement(By.id(home.homepage)).isDisplayed();
+
+	 }
+	 
+	
+	 public void selectMenuBar() {
+		
+		 driver.findElement(By.xpath(home.menuBar)).click(); 
+		 driver.findElement(By.name(home.menuBarClose)).isDisplayed();
+	 }
+	 
+	 public void selectOptionFromMenuBar(String option) throws Exception {
+//		 Actions.scrollToElement(By.text("productsDisplay."+option ));
+		 Actions.scrollToElement(By.xpath("//android.widget.TextView[@text=" +option+"]"));
+		 driver.findElement(By.xpath("//android.widget.TextView[@text=" +option+"]")).click();
+//		 driver.findElement(By.text("productsDisplay."+option )).click();
+	 }
+
+}

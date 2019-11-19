@@ -1,0 +1,7 @@
+step_definitions/productPageSteps.class
+step_definitions/homePageSteps.class
+pages/productPage.class
+pages/BasePage.class
+pages/shoppingBagPage.class
+pages/homePage.class
+step_definitions/shoppingBagSteps.class

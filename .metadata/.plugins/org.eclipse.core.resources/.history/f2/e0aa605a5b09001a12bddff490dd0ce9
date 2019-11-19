@@ -1,0 +1,16 @@
+package setUp;
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+ 
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		 features = "src/test/resources/features/Sample.feature",
+	        glue = "src/test/java/step_definitions",
+	        tags = "@test"
+	        )
+	
+public class runner {
+ 
+}

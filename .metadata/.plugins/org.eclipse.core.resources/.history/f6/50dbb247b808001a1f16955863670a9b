@@ -1,0 +1,8 @@
+package utility;
+
+public class productsDisplay {
+
+	public final static String clearance = "";
+	
+
+}

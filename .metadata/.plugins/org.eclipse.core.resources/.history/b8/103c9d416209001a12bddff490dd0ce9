@@ -1,0 +1,10 @@
+package utility;
+
+public class home {
+
+	public final static String startButton = "";
+	public final static String homepage = "action_bar";
+	public final static String menuBar = "Open navigation drawer";
+	public final static String menuBarClose = "Close navigation drawer";
+
+}

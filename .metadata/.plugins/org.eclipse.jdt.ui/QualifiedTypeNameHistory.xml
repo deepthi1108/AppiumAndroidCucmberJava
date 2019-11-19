@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="utility.productsDisplay"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="cucumber.api.java.en.Then"/>
+<fullyQualifiedTypeName name="utility.shoppingBag"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="java.time.Duration"/>
+<fullyQualifiedTypeName name="Actions.touchActions"/>
+<fullyQualifiedTypeName name="io.appium.java_client.touch.WaitOptions"/>
+<fullyQualifiedTypeName name="io.appium.java_client.android.AndroidDriver"/>
+<fullyQualifiedTypeName name="io.appium.java_client.MobileElement"/>
+<fullyQualifiedTypeName name="Actions.actions"/>
+<fullyQualifiedTypeName name="utility.home"/>
+<fullyQualifiedTypeName name="setUp.appiumSetUp"/>
+<fullyQualifiedTypeName name="io.appium.java_client.remote.MobileCapabilityType"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="pages.productPage"/>
+<fullyQualifiedTypeName name="pages.shoppingBagPage"/>
+</qualifiedTypeNameHistroy>

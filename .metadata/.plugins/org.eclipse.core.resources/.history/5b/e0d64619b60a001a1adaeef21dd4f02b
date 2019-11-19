@@ -1,0 +1,25 @@
+package step_definitions;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import pages.BasePage;
+
+public class homePageSteps implements BasePage{
+
+	@Given("I am on the home page of the app as an anonymous user")
+	public void userIsOnHomePage() throws Exception {
+		HomePage.navigateToHomePage();
+	}
+
+	@When("I tap on the menu bar")
+	public void userTapsOnMenuBar() {
+		HomePage.selectMenuBar();
+	}
+
+	@When("I select the \"([^\"]*)\" from the menu bar")
+	public void userSelectCategory(String option){
+		HomePage.selectOptionFromMenuBar(option);
+		ProductPage.validateProductPage(option);
+	}
+
+}
